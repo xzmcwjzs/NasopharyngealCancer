@@ -261,9 +261,11 @@
     <Compile Include="Controllers\Log_UserController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\MedicalHistory_AccessoryExamination_CTCheckController.cs" />
+    <Compile Include="Controllers\MedicalHistory_AccessoryExamination_ECTController.cs" />
     <Compile Include="Controllers\MedicalHistory_AccessoryExamination_HeartCheckController.cs" />
     <Compile Include="Controllers\MedicalHistory_AccessoryExamination_LungCheckController.cs" />
     <Compile Include="Controllers\MedicalHistory_AccessoryExamination_MRICheckController.cs" />
+    <Compile Include="Controllers\MedicalHistory_AccessoryExamination_PET_CTController.cs" />
     <Compile Include="Controllers\MedicalHistory_AccessoryExamination_StomachCheckController.cs" />
     <Compile Include="Controllers\MedicalHistory_AccessoryExamination_USCheckController.cs" />
     <Compile Include="Controllers\MedicalHistory_AccessoryExamination_XCheckController.cs" />
@@ -2826,6 +2828,18 @@
     <Content Include="Views\Log_User\Top.cshtml" />
     <Content Include="Views\Log_User\Body.cshtml" />
     <Content Include="Views\Log_User\List.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_ECT\Frame.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_ECT\Top.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_ECT\Body.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_ECT\Left.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_ECT\List.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_ECT\ECT.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_PET_CT\Frame.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_PET_CT\Top.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_PET_CT\Body.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_PET_CT\Left.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_PET_CT\List.cshtml" />
+    <Content Include="Views\MedicalHistory_AccessoryExamination_PET_CT\PET_CT.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -306,6 +306,9 @@
                     <td class="auto-style28">
                         <select style="width:142px" id="department" name="department">
                             <option value="">=请选择=</option>
+                            <option value="11">放疗科</option>
+                            <option value="12">化疗科</option>
+                            <option value="13">五官科</option>
                             <option value="1">内科</option>
                             <option value="2">外科</option>
                             <option value="3">妇产科</option>
@@ -322,7 +325,8 @@
                     <td class="auto-style33">
                         <input type="text" id="number" style="height: 18px; width: 90px" name="number" />
                     </td>
-                    <td class="auto-style133">床位号<span style="color: #ff0000">*</span></td>
+                    @*<td class="auto-style133">床位号<span style="color: #ff0000">*</span></td>*@
+                    <td class="auto-style133">登记号<span style="color: #ff0000">*</span></td>
                     <td class="auto-style19">
                         <input type="text" id="bed_number" style="height: 18px; width: 75px" name="bed_number" />
                     </td>
@@ -343,7 +347,7 @@
                         现病史<span style="color: #ff0000">*</span>
                     </td>
                     <td class="auto-style36" colspan="8">
-                        <textarea id="xbs" style="width: 96%" rows="2" name="xbs"></textarea>
+                        <textarea id="xbs" style="width: 96%" rows="4" name="xbs"></textarea>
                     </td>
                     <td class="auto-style19">
                         <input type="button" value="参考模板" style="width: 70px; height: 30px" onclick="templete1()" />
@@ -352,14 +356,15 @@
                 <tr>
                     <td class="auto-style1">既往史</td>
                     <td class="auto-style36" colspan="8">
-                        <textarea id="jws" style="width: 96%" rows="2" name="jws"></textarea>
+                        <textarea id="jws" style="width: 96%" rows="4" name="jws"></textarea>
                     </td>
                     <td class="auto-style19">
                         <input type="button" value="参考模板" style="width: 70px; height: 30px" onclick="templete2()" />
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style1" rowspan="2" valign="top" style="padding-top: 10px">体格检查</td>
+                    @*<td class="auto-style1" rowspan="2" valign="top" style="padding-top: 10px">体格检查</td>*@
+                    <td class="auto-style1" rowspan="2" valign="top" style="padding-top: 10px">查体</td>
                     <td style="border: 1px solid white; text-align: left; background-color: #f1f3f5" class="auto-style27">
                         体温(T)<span style="color: #ff0000">*</span>
                         <input type="text" id="t" name="t" style="height: 18px; width: 25px;" />℃
@@ -379,35 +384,21 @@
                         <a>（</a><input type="text" id="ssy1" style="height: 18px; width: 30px;" name="ssy1" />/
                         <input type="text" id="szy1" style="height: 18px; width: 30px;" name="szy1" />kPa<a>）</a>
                     </td>
-                </tr>
-                @*
-    <tr>
-        <td style="border: 1px solid white; text-align: left; background-color: #f1f3f5" class="auto-style27">
-            面容<span style="color: #ff0000">*</span>
-            <select id="face" name="face" style="width: 60px">
-                <option value="">请选择</option>
-                <option value="1">正常</option>
-                <option value="2">苍白</option>
-                <option value="3">憔悴</option>
-                <option value="4">潮红</option>
-            </select>
-        </td>
-        <td class="auto-style128">心率(HR)<span style="color: #ff0000">*</span></td>
-        <td style="border: 1px solid white; text-align: left; background-color: #f1f3f5" class="auto-style131">
-            <input type="text" id="Text18" style="height: 18px; width: 40px;" name="p" />次/分钟
-        </td>
-        <td class="auto-style123"></td>
-        <td class="auto-style33"></td>
-        <td class="auto-style29"></td>
-        <td class="auto-style19" colspan="3" id="grade" style="color: red">
-            <input type="text" id="values" name="values" style="display: none" />
-        </td>
-    </tr>*@
+                </tr> 
                 <tr>
                     <td colspan="9" class="auto-style36">
-                        <textarea id="other" name="other" style="width: 96%" rows="2"></textarea>
+                        <textarea id="other" name="other" style="width: 96%" rows="4"></textarea>
                     </td>
                 </tr>
+
+                <tr> 
+                    <td class="auto-style1"   valign="top" style="padding-top: 10px">专科检查</td>
+                    <td colspan="9" class="auto-style36">
+                        <textarea id="zkjc" name="zkjc" style="width: 96%" rows="4"></textarea>
+                    </td>
+                </tr>
+                
+
                 <tr id="Tr1">
                     <td colspan="10" class="auto-style36">
                         <a style="color:red;padding-left:6em">辅助检查、检验、诊断和用药信息请点击左侧病史资料下的相关内容！</a>

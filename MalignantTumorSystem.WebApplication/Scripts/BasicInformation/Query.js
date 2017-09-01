@@ -47,8 +47,8 @@
     $("#count5_dl").attr("disabled", true);
 
 
-    $("input[name='chfamilydisease0']").attr("disabled", true);
-    $("#family_other_disease0").attr("disabled", true);
+    //$("input[name='chfamilydisease0']").attr("disabled", true);
+    //$("#family_other_disease0").attr("disabled", true);
     //=============
     $("#cd").click(function () {
         $("input[name='chGuoMin'][value='7']").attr("checked", false);
@@ -3238,6 +3238,74 @@
             $("input[name='chfamilydisease0']").attr("checked", false);
         }
     })
+    //1
+    $("#chfamilydisease_change1").change(function () {
+        var a = $("#chfamilydisease_change1").val();
+        if (a != "") {
+            $("input[name='rdfamily_disease']").attr("checked", false);
+
+        }
+    })
+    $("input[name=" + "chfamilydisease1" + "]").change(function () {
+        var a = $("input[name='chfamilydisease1']:checked").val();
+        if (a != "") {
+            $("input[name='rdfamily_disease']").attr("checked", false);
+        }
+    })
+    $("input[name=" + "rdfamily_disease" + "]").change(function () {
+        var a = $("input[name='rdfamily_disease']:checked").val();
+        if (a == "无") {
+            $("#family_other_disease1").val("");
+            $("#relationship1").val("");
+            $("input[name='chfamilydisease1']").attr("checked", false);
+        }
+    })
+    //2
+    $("#chfamilydisease_change2").change(function () {
+        var a = $("#chfamilydisease_change2").val();
+        if (a != "") {
+            $("input[name='rdfamily_disease']").attr("checked", false);
+
+        }
+    })
+    $("input[name=" + "chfamilydisease2" + "]").change(function () {
+        var a = $("input[name='chfamilydisease2']:checked").val();
+        if (a != "") {
+            $("input[name='rdfamily_disease']").attr("checked", false);
+        }
+    })
+    $("input[name=" + "rdfamily_disease" + "]").change(function () {
+        var a = $("input[name='rdfamily_disease']:checked").val();
+        if (a == "无") {
+            $("#family_other_disease2").val("");
+            $("#relationship2").val("");
+            $("input[name='chfamilydisease2']").attr("checked", false);
+        }
+    })
+    //3
+    $("#chfamilydisease_change3").change(function () {
+        var a = $("#chfamilydisease_change3").val();
+        if (a != "") {
+            $("input[name='rdfamily_disease']").attr("checked", false);
+
+        }
+    })
+    $("input[name=" + "chfamilydisease3" + "]").change(function () {
+        var a = $("input[name='chfamilydisease3']:checked").val();
+        if (a != "") {
+            $("input[name='rdfamily_disease']").attr("checked", false);
+        }
+    })
+    $("input[name=" + "rdfamily_disease" + "]").change(function () {
+        var a = $("input[name='rdfamily_disease']:checked").val();
+        if (a == "无") {
+            $("#family_other_disease3").val("");
+            $("#relationship3").val("");
+            $("input[name='chfamilydisease3']").attr("checked", false);
+        }
+    })
+
+
 
     $("#family_other_disease0").keyup(function () {
         var a = $("#family_other_disease0").val();

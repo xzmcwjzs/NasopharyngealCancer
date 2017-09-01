@@ -697,7 +697,7 @@
                     </tr>
 
                     <tr>
-                        <td class="auto-style10" style="text-align: right; padding-left: 5px;">
+                        <td class="auto-style10" style="text-align: right; padding-left: 5px;" rowspan="4">
                             家族遗传史<span style="color: #ff0000">*</span>
                         </td>
                         <td class="detailTitle" style="text-align: left;" colspan="9">
@@ -705,7 +705,7 @@
                                 <tr id="family_disease_add1">
                                     <td class="detailContent" style="height: 25px; width: 100%;">
                                         <span style="position: relative;">
-                                            <select id="chfamilydisease_change0" name="chfamilydisease_change0" style="width: 80px" onchange="added4();document.getElementById('relationship0').value=this.options[selectedIndex].text ">
+                                            <select id="chfamilydisease_change0" name="chfamilydisease_change0" style="width: 80px" onchange="document.getElementById('relationship0').value=this.options[selectedIndex].text ">
 
                                                 @*<select id="relationship0" name="relationship0" style="width: 80px" onchange="added4()">*@
 
@@ -719,14 +719,14 @@
                                                 <option value="07">儿子</option>
                                                 <option value="08">女儿</option>
                                             </select>
-                                            <input id="relationship0" name="relationship0" onkeyup="added4()" style="position: absolute; width: 60px; height: 15px; left: 1px; top: 0px; border-bottom: 0px; border-right: 0px; border-left: 0px; border-top: 0px;" />
+                                            <input id="relationship0" name="relationship0" style="position: absolute; width: 60px; height: 15px; left: 1px; top: 0px; border-bottom: 0px; border-right: 0px; border-left: 0px; border-top: 0px;" />
                                         </span>
                                         <a style="margin-left: 1em"></a>
                                         <input type="checkbox" name="chfamilydisease0" style="width: 20px" value="高血压" />高血压<a style="padding-left: 2em"></a>
                                         <input type="checkbox" name="chfamilydisease0" style="width: 20px" value="糖尿病" />糖尿病<a style="padding-left: 2em"></a>
                                         <input type="checkbox" name="chfamilydisease0" style="width: 20px" value="结核病" />结核病<a style="padding-left: 2em"></a>
                                         <input type="checkbox" name="chfamilydisease0" style="width: 20px" value="冠心病" />冠心病<a style="padding-left: 2em"></a>
-                                        <input type="checkbox" name="chfamilydisease0" style="width: 20px" value="恶性肿瘤" />恶性肿瘤<a style="padding-left: 1em"></a>
+                                        @*<input type="checkbox" name="chfamilydisease0" style="width: 20px" value="恶性肿瘤" />恶性肿瘤<a style="padding-left: 1em"></a>*@
                                         <input type="checkbox" name="chfamilydisease0" style="width: 20px" value="脑卒中" />脑卒中<a style="padding-left: 1em"></a>
                                         <input type="checkbox" name="chfamilydisease0" style="width: 20px" value="其他疾病" />其他疾病
                                         <input type="text" style="padding-top: 4px; width: 100px" id="family_other_disease0" name="family_other_disease0" />
@@ -736,7 +736,109 @@
                                     </td>
                                 </tr>
                             </table>
+                        </td> 
+                    </tr>
+
+                    <tr> 
+                        <td class="detailTitle" style="text-align: left;" colspan="9">
+                            <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="detailContent" style="height: 25px; width: 100%;">
+                                        <span style="position: relative;">
+                                            <select id="chfamilydisease_change1" name="chfamilydisease_change1" style="width: 80px" onchange="document.getElementById('relationship1').value=this.options[selectedIndex].text ">
+
+                                                <option value="">==请选择==</option>
+                                                <option value="01">祖父</option>
+                                                <option value="02">祖母</option>
+                                                <option value="03">父亲</option>
+                                                <option value="04">母亲</option>
+                                                <option value="05">兄弟</option>
+                                                <option value="06">姐妹</option>
+                                                <option value="07">儿子</option>
+                                                <option value="08">女儿</option>
+                                            </select>
+                                            <input id="relationship1" name="relationship1" style="position: absolute; width: 60px; height: 15px; left: 1px; top: 0px; border-bottom: 0px; border-right: 0px; border-left: 0px; border-top: 0px;" />
+                                        </span>
+                                        <a style="margin-left: 1em"></a>
+                                        <input type="checkbox" name="chfamilydisease1" style="width: 20px" value="高血压" />高血压<a style="padding-left: 2em"></a>
+                                        <input type="checkbox" name="chfamilydisease1" style="width: 20px" value="糖尿病" />糖尿病<a style="padding-left: 2em"></a>
+                                        <input type="checkbox" name="chfamilydisease1" style="width: 20px" value="结核病" />结核病<a style="padding-left: 2em"></a>
+                                        <input type="checkbox" name="chfamilydisease1" style="width: 20px" value="冠心病" />冠心病<a style="padding-left: 2em"></a>
+                                        @*<input type="checkbox" name="chfamilydisease0" style="width: 20px" value="恶性肿瘤" />恶性肿瘤<a style="padding-left: 1em"></a>*@
+                                        <input type="checkbox" name="chfamilydisease1" style="width: 20px" value="脑卒中" />脑卒中<a style="padding-left: 1em"></a>
+                                        <input type="checkbox" name="chfamilydisease1" style="width: 20px" value="其他疾病" />其他疾病
+                                        <input type="text" style="padding-top: 4px; width: 100px" id="family_other_disease1" name="family_other_disease1" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td class="detailTitle" style="text-align: left;" colspan="9">
+                            <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="detailContent" style="height: 25px; width: 100%;">
+                                        <span style="position: relative;">
+                                            <select id="chfamilydisease_change2" name="chfamilydisease_change2" style="width: 80px" onchange="document.getElementById('relationship2').value=this.options[selectedIndex].text ">
+
+                                                <option value="">==请选择==</option>
+                                                <option value="01">祖父</option>
+                                                <option value="02">祖母</option>
+                                                <option value="03">父亲</option>
+                                                <option value="04">母亲</option>
+                                                <option value="05">兄弟</option>
+                                                <option value="06">姐妹</option>
+                                                <option value="07">儿子</option>
+                                                <option value="08">女儿</option>
+                                            </select>
+                                            <input id="relationship2" name="relationship2" style="position: absolute; width: 60px; height: 15px; left: 1px; top: 0px; border-bottom: 0px; border-right: 0px; border-left: 0px; border-top: 0px;" />
+                                        </span>
+                                        <a style="margin-left: 1em"></a>
+                                        <input type="checkbox" name="chfamilydisease2" style="width: 20px" value="高血压" />高血压<a style="padding-left: 2em"></a>
+                                        <input type="checkbox" name="chfamilydisease2" style="width: 20px" value="糖尿病" />糖尿病<a style="padding-left: 2em"></a>
+                                        <input type="checkbox" name="chfamilydisease2" style="width: 20px" value="结核病" />结核病<a style="padding-left: 2em"></a>
+                                        <input type="checkbox" name="chfamilydisease2" style="width: 20px" value="冠心病" />冠心病<a style="padding-left: 2em"></a>
+                                        <input type="checkbox" name="chfamilydisease2" style="width: 20px" value="脑卒中" />脑卒中<a style="padding-left: 1em"></a>
+                                        <input type="checkbox" name="chfamilydisease2" style="width: 20px" value="其他疾病" />其他疾病
+                                        <input type="text" style="padding-top: 4px; width: 100px" id="family_other_disease2" name="family_other_disease2" />
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
+                    </tr>
+
+                    <tr>
+                        <td class="detailTitle" style="text-align: left;" colspan="9">
+                            <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="detailContent" style="height: 25px; width: 100%;">
+                                        <span style="position: relative;">
+                                            <select id="chfamilydisease_change3" name="chfamilydisease_change3" style="width: 80px" onchange="document.getElementById('relationship3').value=this.options[selectedIndex].text ">
+
+                                                <option value="">==请选择==</option>
+                                                <option value="01">祖父</option>
+                                                <option value="02">祖母</option>
+                                                <option value="03">父亲</option>
+                                                <option value="04">母亲</option>
+                                                <option value="05">兄弟</option>
+                                                <option value="06">姐妹</option>
+                                                <option value="07">儿子</option>
+                                                <option value="08">女儿</option>
+                                            </select>
+                                            <input id="relationship3" name="relationship3" style="position: absolute; width: 60px; height: 15px; left: 1px; top: 0px; border-bottom: 0px; border-right: 0px; border-left: 0px; border-top: 0px;" />
+                                        </span>
+                                        <a style="margin-left: 1em"></a>
+                                        <input type="checkbox" name="chfamilydisease3" style="width: 20px" value="高血压" />高血压<a style="padding-left: 2em"></a>
+                                        <input type="checkbox" name="chfamilydisease3" style="width: 20px" value="糖尿病" />糖尿病<a style="padding-left: 2em"></a>
+                                        <input type="checkbox" name="chfamilydisease3" style="width: 20px" value="结核病" />结核病<a style="padding-left: 2em"></a>
+                                        <input type="checkbox" name="chfamilydisease3" style="width: 20px" value="冠心病" />冠心病<a style="padding-left: 2em"></a>
+                                        <input type="checkbox" name="chfamilydisease3" style="width: 20px" value="脑卒中" />脑卒中<a style="padding-left: 1em"></a>
+                                        <input type="checkbox" name="chfamilydisease3" style="width: 20px" value="其他疾病" />其他疾病
+                                        <input type="text" style="padding-top: 4px; width: 100px" id="family_other_disease3" name="family_other_disease3" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td> 
                     </tr>
                     <tr>
                         <td class="auto-style10" style="text-align: right; padding-left: 5px;">

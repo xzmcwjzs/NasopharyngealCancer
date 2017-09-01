@@ -41,7 +41,7 @@
                 <td>家庭常住地址</td>
                 <td>创建日期</td>
                 <td>查看</td>
-                <td>检测报告照片</td>
+                @*<td>检测报告照片</td>*@
                 <td>修改</td>
             </tr>
             <tbody>
@@ -127,11 +127,11 @@
                                 <img alt="查看详细资料" src="/images/imgs/icon_show.gif" />
                             </a>
                         </td>
-                        <td>
+                        @*<td>
                             <a onclick="OpenTopWindow('/MedicalHistory_TestReport_BMC/Photos?id_card=@id_card&resident_name=@name&type=BMC',900,650)" href="javascript:void(0)">
                                 <img alt="查看详细资料" src="/images/imgs/icon_show.gif" />
                             </a>
-                        </td>
+                        </td>*@
 
                         <td class="auto-style1">
                             @if (!(ViewBag.dell_user_name == worker_user_name) && !Enum.GetNames(typeof(MalignantTumorSystem.Model.Enum.UserNameEnum)).Contains(ViewBag.dell_user_name as string))

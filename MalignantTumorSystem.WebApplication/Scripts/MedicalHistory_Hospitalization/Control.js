@@ -1,8 +1,8 @@
 ﻿$(function () {
     //判断是否是医院，如果是，则自动添加诊治医院，且不允许修改
     if (type != "") {
-        $("#hospital").val(departments);
-        $("#hospital").attr("readonly", "readonly");
+        //$("#hospital").val(departments);
+        //$("#hospital").attr("readonly", "readonly");
     }
 
 })

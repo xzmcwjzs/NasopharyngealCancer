@@ -264,13 +264,13 @@
                         <input type="text" id="hostMother_age" style="padding-top: 2px; height: 18px; width: 80px;" name="hostMother_age" readonly="readonly" />
                     </td>
                 </tr>
-                <tr id="tr1">
+
+                @*<tr id="tr1">
                     <td class="auto-style100">
                         户主的
                         <span style="position: relative;">
                             <select id="relative_0" style="width: 60px" onchange="added();document.getElementById('relation0').value=this.options[selectedIndex].text;">
                                
-                                @*<select id="relation0" name="relation0" style="height: 20px; width: 60px;" onchange="added()">*@ 
                                     <option value="">请选择</option>
                                     <option value="1">长子</option>
                                     <option value="2">长女</option>
@@ -300,7 +300,90 @@
                         <input type="text" id="relation_birth_date0" style="padding-top: 2px;display:none" name="relation_birth_date0" />
                         <input type="text" id="relation_age0" style="padding-top: 2px; height: 18px; width: 80px;" name="relation_age0" readonly="readonly" />
                     </td>
+                </tr>*@
+
+                <tr>
+                    <td colspan="10">
+                        <table border="1" style="border-collapse: collapse;width:100%" cellpadding="0" cellspacing="1" class="detailTable" id="tab2">
+                            <tr>
+                                <td class="auto-style100" style="width:100px">
+                                    <input type="button" id="add" name="add" style="width:80px;height:22px;" value="增加一行" onclick="myadd();"/>
+                                </td>
+                                <td class="auto-style100">
+                                    户主的
+                                    <span style="position: relative;">
+                                        <select id="relative_0" style="width: 60px" onchange="document.getElementById('relation0').value=this.options[selectedIndex].text;">
+
+                                            <option value="">请选择</option>
+                                            <option value="1">长子</option>
+                                            <option value="2">长女</option>
+                                            <option value="3">次子</option>
+                                            <option value="4">次女</option>
+                                            <option value="5">三子</option>
+                                            <option value="6">三女</option>
+                                        </select>
+                                        <input id="relation0" name="relation0" style="position: absolute; width: 40px; height: 15px; left: 1px; top: 0px; border-bottom: 0px; border-right: 0px; border-left: 0px; border-top: 0px;" />
+                                    </span>姓名
+                                </td>
+                                <td class="auto-style36">
+                                    <input type="text" id="relation_names0" name="relation_names0" style="height: 18px; padding-top: 2px;padding-left:1px; width: 100px;" />
+                                </td> 
+                                <td class="auto-style119">身份证号码</td>
+                                <td class="auto-style40">
+                                    <input type="text" id="relation_id_card0" style="padding-top: 2px; height: 18px; width: 140px;" name="relation_id_card0" />
+                                </td>
+                                <td class="auto-style119">手机号码</td>
+                                <td class="auto-style40">
+                                    <input type="text" id="relation_phone0" style="padding-top: 2px; height: 18px; width: 110px" name="relation_phone0" />
+                                </td>
+                                <td class="auto-style118">年龄</td>
+                                <td class="auto-style1">
+                                    <input type="text" id="relation_birth_date0" style="padding-top: 2px;display:none" name="relation_birth_date0" />
+                                    <input type="text" id="relation_age0" style="padding-top: 2px; height: 18px; width: 80px;" name="relation_age0"/>
+                                </td>
+                            </tr>
+
+                            @*<tr>
+                                <td class="auto-style100" style="width:100px">
+                                </td>
+                                <td class="auto-style100">
+                                    户主的
+                                    <span style="position: relative;">
+                                        <select id="relative_0" style="width: 60px" onchange="document.getElementById('relation0').value=this.options[selectedIndex].text;">
+
+                                            <option value="">请选择</option>
+                                            <option value="1">长子</option>
+                                            <option value="2">长女</option>
+                                            <option value="3">次子</option>
+                                            <option value="4">次女</option>
+                                            <option value="5">三子</option>
+                                            <option value="6">三女</option>
+                                        </select>
+                                        <input id="relation0" name="relation0" style="position: absolute; width: 40px; height: 15px; left: 1px; top: 0px; border-bottom: 0px; border-right: 0px; border-left: 0px; border-top: 0px;" />
+                                    </span>姓名
+                                </td>
+                                <td class="auto-style36">
+                                    <input type="text" id="relation_names0" name="relation_names0" style="height: 18px; padding-top: 2px;padding-left:1px; width: 100px;" />
+                                </td>
+                                <td class="auto-style119">身份证号码</td>
+                                <td class="auto-style40">
+                                    <input type="text" id="relation_id_card0" style="padding-top: 2px; height: 18px; width: 140px;" name="relation_id_card0" />
+                                </td>
+                                <td class="auto-style119">手机号码</td>
+                                <td class="auto-style40">
+                                    <input type="text" id="relation_phone0" style="padding-top: 2px; height: 18px; width: 110px" name="relation_phone0" />
+                                </td>
+                                <td class="auto-style118">年龄</td>
+                                <td class="auto-style1">
+                                    <input type="text" id="relation_birth_date0" style="padding-top: 2px;display:none" name="relation_birth_date0" />
+                                    <input type="text" id="relation_age0" style="padding-top: 2px; height: 18px; width: 80px;" name="relation_age0" />
+                                </td>
+                            </tr>*@
+                        </table>
+                    </td>
                 </tr>
+                 
+              
                 <tr>
                     <td class="auto-style120"></td>
                     <td class="auto-style36"></td>
@@ -329,5 +412,47 @@
             </table> 
         </div>
     </form> 
+    <script>
+        var i = 1;
+        function myadd() {
+            var str = ' <tr>' +
+'                                <td class="auto-style100" style="width:100px">' +
+'                                </td>' +
+'                                <td class="auto-style100">' +
+'                                    户主的' +
+'                                    <span style="position: relative;">' +
+'                                        <select id="relative_'+i+'" style="width: 60px" onchange="document.getElementById(\'relation'+i+'\').value=this.options[selectedIndex].text;">' +
+'                                            <option value="">请选择</option>' +
+'                                            <option value="1">长子</option>' +
+'                                            <option value="2">长女</option>' +
+'                                            <option value="3">次子</option>' +
+'                                            <option value="4">次女</option>' +
+'                                            <option value="5">三子</option>' +
+'                                            <option value="6">三女</option>' +
+'                                        </select>' +
+'                                        <input id="relation' + i + '" name="relation' + i + '" style="position: absolute; width: 40px; height: 15px; left: 1px; top: 0px; border-bottom: 0px; border-right: 0px; border-left: 0px; border-top: 0px;" />' +
+'                                    </span>姓名' +
+'                                </td>' +
+'                                <td class="auto-style36">' +
+'                                    <input type="text" id="relation_names' + i + '" name="relation_names' + i + '" style="height: 18px; padding-top: 2px;padding-left:1px; width: 100px;" />' +
+'                                </td>' +
+'                                <td class="auto-style119">身份证号码</td>' +
+'                                <td class="auto-style40">' +
+'                                    <input type="text" id="relation_id_card' + i + '" style="padding-top: 2px; height: 18px; width: 140px;" name="relation_id_card' + i + '" />' +
+'                                </td>' +
+'                                <td class="auto-style119">手机号码</td>' +
+'                                <td class="auto-style40">' +
+'                                    <input type="text" id="relation_phone' + i + '" style="padding-top: 2px; height: 18px; width: 110px" name="relation_phone' + i + '" />' +
+'                                </td>' +
+'                                <td class="auto-style118">年龄</td>' +
+'                                <td class="auto-style1">' +
+'                                    <input type="text" id="relation_birth_date' + i + '" style="padding-top: 2px;display:none" name="relation_birth_date' + i + '" />' +
+'                                    <input type="text" id="relation_age' + i + '" style="padding-top: 2px; height: 18px; width: 80px;" name="relation_age' + i + '" />' +
+'                                </td>' +
+'                            </tr>';
+            i++;
+            $("#tab2").append(str);
+        }
+    </script>
 </body>
 </html>

@@ -5,10 +5,10 @@
         $("#cd").hide();
     }
 
-    $("#relation_names0").attr("disabled", true);
-    $("#relation_id_card0").attr("disabled", true);
-    $("#relation_phone0").attr("disabled", true);
-    $("#relation_age0").attr("disabled", true);
+    //$("#relation_names0").attr("disabled", true);
+    //$("#relation_id_card0").attr("disabled", true);
+    //$("#relation_phone0").attr("disabled", true);
+    //$("#relation_age0").attr("disabled", true);
 
 
     $("#cd").click(function () {

@@ -298,7 +298,8 @@
                     <td class="auto-style27">
                         <input type="text" value="@DateTime.Now.ToString("yyyy-MM-dd")" onfocus="WdatePicker({ dateFmt: 'yyyy-MM-dd', maxDate: '%y-%M-%d' })" style="width: 100px; height: 18px;" id="data" name="data"/>
                     </td>
-                    <td class="auto-style1">门诊号</td>
+                    @*<td class="auto-style1">门诊号</td>*@
+                    <td class="auto-style1">登记号</td>
                     <td class="auto-style28">
                         <input type="text" id="outpatientId" style="height: 18px; width: 137px" name="outpatientId" />
                     </td>
@@ -310,6 +311,9 @@
                     <td class="auto-style33">
                         <select style="width: 90px" id="department" name="department">
                             <option value="">=请选择=</option>
+                            <option value="11">放疗科</option>
+                            <option value="12">化疗科</option>
+                            <option value="13">五官科</option>
                             <option value="1">内科</option>
                             <option value="2">外科</option>
                             <option value="3">妇产科</option>
@@ -649,9 +653,15 @@
                     </td>
                 </tr>
                 <tr>
+                    <td class="auto-style1">住院放疗</td>
+                    <td class="auto-style36" colspan="9">
+                        <textarea id="zyfl" name="zyfl" style="height: 30px; width: 96%;" placeholder="住院放疗"></textarea>
+                    </td>
+                </tr>
+                <tr>
                     <td class="auto-style1">其他医嘱</td>
                     <td class="auto-style36" colspan="9">
-                        <textarea id="advice" name="advice" style="height: 18px; width: 96%;" placeholder="其他医嘱"></textarea>
+                        <textarea id="advice" name="advice" style="height: 30px; width: 96%;" placeholder="其他医嘱"></textarea>
                     </td>
                 </tr>
                 <tr>
