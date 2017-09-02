@@ -316,26 +316,41 @@
                         <label><input type="radio" id="treatmentsituation1" name="treatmentsituation" value="01" />治疗<a style="padding-left: 1em"></a></label>
                         <label><input type="radio" id="treatmentsituationn2" name="treatmentsituation" value="02" />未治疗<a style="padding-left: 1em"></a></label>
                     </td>
-                    <td class="auto-style247">并发症</td>
-                    <td class="auto-style28" colspan="5">
-                        <input type="text" name="complication" id="complication" style="padding-top: 2px; width: 300px; height: 18px;" />
-                    </td>
-                </tr>
-                <tr id="istreatment">
                     <td class="auto-style247">治疗医院</td>
-                    <td class="auto-style27">
+                    <td class="auto-style28" colspan="3">
                         <input type="text" name="treatmenthospital" id="treatmenthospital" style="padding-top: 2px; width: 120px; height: 18px;" />
                     </td>
+                    <td class="auto-style29">分期</td>
+                    <td class="auto-style19">
+                        <select id="fenqi" name="fenqi" style="height: 20px; width: 80px;">
+                            <option value="">=请选择=</option>
+                            <option>Ⅰ期</option>
+                            <option>Ⅱ期</option>
+                            <option>Ⅲ期</option>
+                            <option>Ⅳa期</option>
+                            <option>Ⅳb期</option>
+                            <option>Ⅳc期</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style247">并发症</td>
+                    <td class="auto-style28" colspan="9">
+                        <textarea  name="complication" id="complication" style="padding-top: 2px; width: 96%;" rows="4"></textarea>  
+                    </td>
+                </tr>
+                <tr id="istreatment"> 
                     <td class="auto-style1">治疗</td>
-                    <td class="auto-style50" colspan="7">
+                    <td class="auto-style50" colspan="9">
                         <label><input type="checkbox" name="treatment" value="01" />手术<a style="padding-left: 1em"></a></label>
                         <label><input type="checkbox" name="treatment" value="02" />化疗<a style="padding-left: 1em"></a></label>
-                        <label><input type="checkbox" name="treatment" value="03" />放疗<a style="padding-left: 1em"></a></label>
-                        <label><input type="checkbox" name="treatment" value="04" />中药<a style="padding-left: 1em"></a></label>
-                        <label><input type="checkbox" name="treatment" value="05" />化学<a style="padding-left: 1em"></a></label>
-                        <label><input type="checkbox" name="treatment" value="06" />分子靶向<a style="padding-left: 1em"></a></label>
-                        <label><input type="checkbox" name="treatment" value="07" />对症治疗<a style="padding-left: 1em"></a></label>
-                        <label><input type="checkbox" name="treatment" value="08" />止痛治疗<a style="padding-left: 1em"></a></label>
+                        <label><input type="checkbox" name="treatment" value="03" />放疗(普通)<a style="padding-left: 1em"></a></label>
+                        <label><input type="checkbox" name="treatment" value="04" />放疗(适形)<a style="padding-left: 1em"></a></label>
+                        <label><input type="checkbox" name="treatment" value="05" />放疗(调强)<a style="padding-left: 1em"></a></label>
+                        <label><input type="checkbox" name="treatment" value="06" />中药<a style="padding-left: 1em"></a></label>
+                        <label><input type="checkbox" name="treatment" value="07" />分子靶向<a style="padding-left: 1em"></a></label>
+                        <label><input type="checkbox" name="treatment" value="08" />对症治疗<a style="padding-left: 1em"></a></label>
+                        <label><input type="checkbox" name="treatment" value="09" />止痛治疗<a style="padding-left: 1em"></a></label>
                         其他：<input type="text" name="treatmentother" id="treatmentother" style="padding-top: 2px; width: 120px; height: 18px;" />
                     </td>
                 </tr>
@@ -376,7 +391,12 @@
                         </span>
                     </td>
                 </tr>
-
+                <tr>
+                    <td class="auto-style247">影像学检查报告</td>
+                    <td class="auto-style28" colspan="9">
+                        <textarea name="yxxjcbg" id="yxxjcbg" style="padding-top: 2px; width: 96%;" rows="4"></textarea>
+                    </td>
+                </tr>
                 <tr>
                     <td class="auto-style247" rowspan="2" id="tumorhistoryrowspan">肿瘤家族史</td>
                     <td class="auto-style28" colspan="9">

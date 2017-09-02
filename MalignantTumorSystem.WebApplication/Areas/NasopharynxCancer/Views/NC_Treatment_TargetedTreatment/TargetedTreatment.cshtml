@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "鼻咽癌靶向治疗";
+    Layout = "~/Areas/NasopharynxCancer/Views/Shared/MyLayout.cshtml";
+}
+
+@section head{
+
+    <style>
+        .my-style1 {
+            background-color: #e2ebfb;
+            padding: 3px;
+            color: black;
+            text-align: right;
+            height: 25px;
+            /*width:10%;*/
+            border: 1px white solid;
+        }
+
+        .my-style2 {
+            background-color: #f1f3f5;
+            padding: 3px;
+            color: black;
+            text-align: right;
+            height: 25px;
+            /*width:10%;*/
+            border: 1px white solid;
+        }
+
+        .my-style3 {
+            background-color: #f1f3f5;
+            padding: 3px;
+            height: 25px;
+            /*width:10%;*/
+            text-align: left;
+            border: 1px white solid;
+        }
+    </style>
+}
+
+<table border="1" style="border-collapse: collapse; width: 100%;background-color:#f1f3f5;text-align:center;" cellpadding="0" cellspacing="1">
+    <tr>
+        <td class="my-style1" style="width:10%;" rowspan="1">靶向治疗层次</td> 
+        <td class="my-style3" style="width:10%">
+            <select id="bxzlcc" name="bxzlcc">
+                <option>=请选择=</option>
+                <option>器官</option>
+                <option>细胞</option>
+                <option>分子</option>
+            </select>
+        </td>
+        <td class="my-style1" style="width:10%;">作用靶点</td>
+        <td class="my-style3" style="width:20%" colspan="2">
+            <input type="text" id="zybd" name="zybd" style="width:200px;height:22px;" />
+        </td>
+        <td class="my-style3" style="width:50%" colspan="5"></td>
+    </tr>
+    <tr>
+        <td class="my-style1" style="width:10%;" rowspan="1">取材</td>
+        <td class="my-style3" style="width:90%" colspan="9">
+           <textarea id="qc" name="qc" style="width:96%" rows="4"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td class="my-style1" style="width:10%;" rowspan="1">靶点检测</td>
+        <td class="my-style3" style="width:90%" colspan="9">
+            <textarea id="bdjc" name="bdjc" style="width:96%" rows="4"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td class="my-style1" style="width:10%;" rowspan="1">用药方案</td>
+        <td class="my-style3" style="width:90%" colspan="9">
+            <textarea id="yyfa" name="yyfa" style="width:96%" rows="4"></textarea>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="my-style3" colspan="9"></td>
+        <td class="my-style3" colspan="1" style="text-align:right">
+            医师<input type="text" id="doctor" name="doctor" style="width:100px;" />日期<input type="text" id="checkdate" name="checkdate" style="width:100px;" onclick="WdatePicker({dataFmt:'yyyy-MM-dd', maxDate: '%y-%M-%d'})" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+        </td>
+    </tr>
+    <tr id="last">
+        <td colspan="10" style="height: 25px; padding-top: 3px; border-left: 1px solid white; border-right: 1px solid white; border-bottom: 1px solid white">
+            <div style="text-align: center; margin-top: 8px;">
+                <input type="button" style="cursor: pointer; background-image: url(/images/image/1.jpg); border: none; height: 22px; width: 91px;" id="bt1" />
+                <a style="padding-left: 2em"></a>
+                <input type="button" id="cd" style="cursor: pointer; background-image: url(/images/image/2.jpg); border: none; height: 22px; width: 91px;" onclick="form1.reset()" />
+            </div>
+        </td>
+    </tr>
+</table>
+

@@ -211,7 +211,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style1">常住地址<span style="color: #ff0000">*</span></td>
-                    <td colspan="5" class="auto-style37" style="height: 25px">
+                    <td colspan="5" class="auto-style37" style="height: 25px;text-align:left">
                         <select style="width: 80px" id="ddlProvince" name="ddlProvince">
                             <option value="">=请选择=</option>
                         </select>
@@ -247,6 +247,9 @@
                     <td class="auto-style28">
                         <select style="width:142px" id="department" name="department">
                             <option value="">=请选择=</option>
+                            <option value="11">放疗科</option>
+                            <option value="12">化疗科</option>
+                            <option value="13">五官科</option>
                             <option value="1">内科</option>
                             <option value="2">外科</option>
                             <option value="3">妇产科</option>
@@ -263,12 +266,13 @@
                     <td class="auto-style33">
                         <input type="text" id="number" style="height: 18px; width: 90px" name="number" />
                     </td>
-                    <td class="auto-style133">床位号<span style="color: #ff0000">*</span></td>
+                    @*<td class="auto-style133">床位号<span style="color: #ff0000">*</span></td>*@
+                    <td class="auto-style133">登记号<span style="color: #ff0000">*</span></td>
                     <td class="auto-style19">
                         <input type="text" id="bed_number" style="height: 18px; width: 75px" name="bed_number" />
                     </td>
                 </tr>
-                <tr>
+                @*<tr>
                     <td class="auto-style1">会诊记录</td>
                     <td class="auto-style27">
                         <input type="text" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm', maxDate: '%y-%M-%d %H:%m' })" style="width: 100px; height: 18px;" id="rq" name="rq" placeholder="日期" />
@@ -276,7 +280,98 @@
                     <td class="auto-style36" colspan="8">
                         <textarea style="width:98%" rows="8" id="context" name="context"></textarea>
                     </td>
+                </tr>*@
+                <tr>
+                    <td class="auto-style1" rowspan="3">申请会诊记录</td>
+                    <td class="auto-style27">
+                        患者病情及诊疗情况
+                    </td>
+                    <td class="auto-style36" colspan="8">
+                        <textarea style="width:98%" rows="4" id="hzbq" name="hzbq"></textarea>
+                    </td>
                 </tr>
+                <tr> 
+                    <td class="auto-style27">
+                        申请会诊的理由和目的
+                    </td>
+                    <td class="auto-style36" colspan="8">
+                        <textarea style="width:98%" rows="4" id="sqhzly" name="sqhzly"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style27">
+                        申请会诊科室
+                    </td>
+                    <td class="auto-style36" colspan="2">
+                        <input type="text" id="sqhzks" name="sqhzks" style="width:200px;"/>
+                    </td>
+                    <td class="auto-style1">
+                        申请会诊医师签名
+                    </td>
+                    <td class="auto-style28">
+                        <input type="text" id="hzysqm" name="hzysqm" style="width:200px;" />
+                    </td>
+                    <td class="auto-style29">
+                        申请时间
+                    </td>
+                    <td class="auto-style33">
+                        <input type="text" id="sqsj" name="sqsj" style="width:100px;" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm', maxDate: '%y-%M-%d %H:%m' })"/>
+                    </td> 
+                    <td class="auto-style19" colspan="2"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style1" rowspan="3">会诊意见记录</td>
+                    <td class="auto-style27">
+                        会诊意见
+                    </td>
+                    <td class="auto-style36" colspan="8">
+                        <textarea style="width:98%" rows="4" id="hzyj" name="hzyj"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style27">
+                        会诊医院
+                    </td>
+                    <td class="auto-style36" colspan="2">
+                        <input type="text" id="hzyy" name="hzyy" style="width:200px;" />
+                    </td>
+                    <td class="auto-style1">
+                        会诊科室
+                    </td>
+                    <td class="auto-style28">
+                        <input type="text" id="hzks" name="hzks" style="width:200px;" />
+                    </td>
+                    <td class="auto-style29">
+                        会诊时间
+                    </td>
+                    <td class="auto-style33">
+                        <input type="text" id="hzsj" name="hzsj" style="width:100px;" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm', maxDate: '%y-%M-%d %H:%m' })" />
+                    </td> 
+                    <td class="auto-style19" colspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="auto-style27">
+                        接收科室
+                    </td>
+                    <td class="auto-style36" colspan="2">
+                        <input type="text" id="jsks" name="jsks" style="width:200px;" />
+                    </td>
+                    <td class="auto-style1">
+                        收治科室
+                    </td>
+                    <td class="auto-style28">
+                        <input type="text" id="szks" name="szks" style="width:200px;" />
+                    </td>
+                    <td class="auto-style29">
+                        会诊医师签名
+                    </td>
+                    <td class="auto-style33" colspan="3">
+                        <input type="text" id="ysqm" name="ysqm" style="width:250px;" />
+                    </td> 
+                </tr>
+
+
 
                 <tr id="last">
                     <td colspan="10" style="height: 25px; padding-top: 3px; border-left: 1px solid white; border-right: 1px solid white; border-bottom: 1px solid white">

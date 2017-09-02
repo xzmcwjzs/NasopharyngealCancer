@@ -241,6 +241,7 @@
     <Compile Include="Areas\NasopharynxCancer\Controllers\NC_Treatment_ChemicalTreatmentController.cs" />
     <Compile Include="Areas\NasopharynxCancer\Controllers\NC_Treatment_OperativeTreatmentController.cs" />
     <Compile Include="Areas\NasopharynxCancer\Controllers\NC_Treatment_RadiotherapyController.cs" />
+    <Compile Include="Areas\NasopharynxCancer\Controllers\NC_Treatment_TargetedTreatmentController.cs" />
     <Compile Include="Areas\NasopharynxCancer\Controllers\NC_Treatment_TCMTreatmentController.cs" />
     <Compile Include="Areas\NasopharynxCancer\NasopharynxCancerAreaRegistration.cs" />
     <Compile Include="Common\ComunityCode\Address.cs" />
@@ -1319,6 +1320,12 @@
     <Content Include="Areas\BreastCancer\Views\BC_GenesAndProteomics_21\GenesShow.cshtml" />
     <Content Include="Areas\BreastCancer\Views\BC_QOL\QOLShow.cshtml" />
     <Content Include="Areas\BreastCancer\Views\BC_QOL\QOLUpdate.cshtml" />
+    <Content Include="Areas\NasopharynxCancer\Views\NC_Treatment_TargetedTreatment\Frame.cshtml" />
+    <Content Include="Areas\NasopharynxCancer\Views\NC_Treatment_TargetedTreatment\Top.cshtml" />
+    <Content Include="Areas\NasopharynxCancer\Views\NC_Treatment_TargetedTreatment\Body.cshtml" />
+    <Content Include="Areas\NasopharynxCancer\Views\NC_Treatment_TargetedTreatment\Left.cshtml" />
+    <Content Include="Areas\NasopharynxCancer\Views\NC_Treatment_TargetedTreatment\List.cshtml" />
+    <Content Include="Areas\NasopharynxCancer\Views\NC_Treatment_TargetedTreatment\TargetedTreatment.cshtml" />
     <None Include="Properties\PublishProfiles\BreastCancer.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Common\matchName.show.js" />

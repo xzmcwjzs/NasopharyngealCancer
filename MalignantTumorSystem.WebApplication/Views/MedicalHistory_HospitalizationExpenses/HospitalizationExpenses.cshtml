@@ -215,6 +215,9 @@
                     <td class="auto-style28">
                         <select style="width:142px" id="department" name="department">
                             <option value="">=请选择=</option>
+                            <option value="11">放疗科</option>
+                            <option value="12">化疗科</option>
+                            <option value="13">五官科</option>
                             <option value="1">内科</option>
                             <option value="2">外科</option>
                             <option value="3">妇产科</option>
@@ -231,11 +234,32 @@
                     <td class="auto-style33">
                         <input type="text" id="number" style="height: 18px; width: 90px" name="number" />
                     </td>
-                    <td class="auto-style134">床位号<span style="color: #ff0000">*</span></td>
+                    @*<td class="auto-style134">床位号<span style="color: #ff0000">*</span></td>*@
+                    <td class="auto-style134">登记号<span style="color: #ff0000">*</span></td>
                     <td class="auto-style19">
                         <input type="text" id="bed_number" style="height: 18px; width: 75px" name="bed_number" />
                     </td>
                 </tr>
+                @*=================新增修改内容===================*@
+                <tr>
+                    <td class="auto-style1">放疗费</td>
+                    <td class="auto-style27">
+                        <input type="text" style="width: 100px; height: 18px;" id="flf" name="flf" />
+                    </td>
+                    <td class="auto-style133">药费</td>
+                    <td class="auto-style28">
+                        <input type="text" style="width: 100px; height: 18px;" id="yf" name="yf" />
+                    </td>
+                    <td class="auto-style135">检查费</td>
+                    <td class="auto-style28">
+                        <input type="text" style="width: 137px; height: 18px;" id="jcf" name="jcf" />
+                    </td>
+                    <td class="auto-style29"><input id="resident_id" name="resident_id" style="width: 75px;display:none" type="text" /></td>
+                    <td class="auto-style33"></td>
+                    <td class="auto-style134"></td>
+                    <td class="auto-style19"></td>
+                </tr>
+                @*=================新增修改内容===================*@
                 <tr>
                     <td class="auto-style1">住院总费用</td>
                     <td class="auto-style27">

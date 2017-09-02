@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "内镜检查";
+    ViewBag.Title = "鼻咽镜检查";
     Layout = "~/Areas/NasopharynxCancer/Views/Shared/MyLayout.cshtml";
 }
 
@@ -40,7 +40,7 @@
 
 <table border="1" style="border-collapse: collapse; width: 100%;background-color:#f1f3f5;text-align:center;" cellpadding="0" cellspacing="1">
     <tr>
-        <td class="my-style1" style="width:10%;" rowspan="8">鼻内镜检查</td>
+        <td class="my-style1" style="width:10%;" rowspan="10">鼻内镜检查</td>
         <td class="my-style2" style="width:10%" rowspan="2">鼻甲</td>
         <td class="my-style1" style="width:5%">大小</td>
         <td class="my-style3" style="width:10%">
@@ -198,8 +198,28 @@
             </select>
         </td>
     </tr>
+
     <tr>
-        <td class="my-style2" style="width:10%" rowspan="1">鼻咽部</td>
+        <td class="my-style2" style="width:10%" rowspan="3">鼻咽部</td>
+        <td class="my-style1" style="width:5%">咽隐窝</td>
+        <td class="my-style3" style="width:10%">
+            <label style="padding-left:1em;"><input type="radio" value="1" name="bnjbybyyw" id="bnjbybyywd" />对称</label>
+            <label style="padding-left:1em;"><input type="radio" value="2" name="bnjbybyyw" id="bnjbybyywb" />不对称</label>
+        </td>
+        <td class="my-style1" style="width:5%">咽鼓管咽口</td>
+        <td class="my-style3" style="width:10%">
+            <label style="padding-left:1em;"><input type="radio" value="1" name="bnjbybygg" id="bnjbybyggd" />对称</label>
+            <label style="padding-left:1em;"><input type="radio" value="2" name="bnjbybygg" id="bnjbybyggb" />不对称</label>
+        </td>
+        <td class="my-style1" style="width:5%">圆枕</td>
+        <td class="my-style3" style="width:10%">
+            <label style="padding-left:1em;"><input type="radio" value="1" name="bnjbybyz" id="bnjbybyzd" />对称</label>
+            <label style="padding-left:1em;"><input type="radio" value="2" name="bnjbybyz" id="bnjbybyzb" />不对称</label>
+        </td> 
+        <td class="my-style3"colspan="2"> 
+        </td>
+    </tr>
+    <tr> 
         <td class="my-style1" style="width:5%">黏膜增厚</td>
         <td class="my-style3" style="width:10%">
             <label style="padding-left:1em;"><input type="radio" value="1" name="bnjbybnmzh" id="bnjbybnmzhy" />有</label>
@@ -220,7 +240,14 @@
             <label style="padding-left:1em;"><input type="radio" value="1" name="bnjbybkl" id="bnjbybkly" />有</label>
             <label style="padding-left:1em;"><input type="radio" value="2" name="bnjbybkl" id="bnjbybklw" />无</label>
         </td>
-        </tr>
+    </tr>
+    <tr>
+        <td class="my-style1" style="width:5%">其他</td>
+        <td class="my-style3" colspan="7">
+           <textarea id="bnjbybqt" name="bnjbybqt" style="width:96%" rows="4"></textarea>
+        </td>
+    </tr>
+
 
     <tr>
         <td class="my-style1" style="width:10%;" rowspan="8">耳内镜检查</td>

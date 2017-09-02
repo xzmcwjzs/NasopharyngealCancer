@@ -249,6 +249,9 @@
                     <td class="auto-style28">
                         <select style="width: 142px" id="department" name="department">
                             <option value="">=请选择=</option>
+                            <option value="11">放疗科</option>
+                            <option value="12">化疗科</option>
+                            <option value="13">五官科</option>
                             <option value="1">内科</option>
                             <option value="2">外科</option>
                             <option value="3">妇产科</option>
@@ -265,19 +268,18 @@
                     <td class="auto-style33">
                         <input type="text" id="number" style="height: 18px; width: 90px" name="number" />
                     </td>
-                    <td class="auto-style133">床位号<span style="color: #ff0000">*</span></td>
+                    @*<td class="auto-style133">床位号<span style="color: #ff0000">*</span></td>*@
+                    <td class="auto-style133">登记号<span style="color: #ff0000">*</span></td> 
                     <td class="auto-style19">
                         <input type="text" id="bed_number" style="height: 18px; width: 75px" name="bed_number" />
                     </td>
                 </tr>
 
                 <tr>
-                    <td class="auto-style1">入院诊断</td>
+                   
+                    @*<td class="auto-style1">疾病状态</td>*@
+                    <td class="auto-style1">病人状态</td>
                     <td class="auto-style27">
-                        <input type="text" id="rjudge" name="rjudge" style="height: 18px; width: 100px;" placeholder="诊断名称" />
-                    </td>
-                    <td class="auto-style1">疾病状态</td>
-                    <td class="auto-style28">
                         <select style="width: 142px; height: 20px" id="state" name="state">
                             <option value="">==请选择==</option>
                             <option value="稳定期">稳定期</option>
@@ -291,12 +293,30 @@
                     <td class="auto-style28">
                         <input type="text" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd', maxDate: '%y-%M-%d' })" style="width: 106px; height: 18px;" id="fbrq" name="fbrq" />
                     </td>
-                    <td class="auto-style29">确认日期</td>
-                    <td class="auto-style33">
+                    <td class="auto-style1">确认日期</td>
+                    <td class="auto-style28">
                         <input type="text" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd', maxDate: '%y-%M-%d' })" style="width: 90px; height: 18px;" id="qrrq" name="qrrq" />
+                    </td> 
+                    <td class="auto-style19" colspan="4"></td>
+                </tr>
+
+                <tr>
+                    <td class="auto-style1" rowspan="3">入院诊断
+                    <input type="button" value="增加一行" style="width:70px;height:22px"/>
                     </td>
-                    <td class="auto-style133"><input id="resident_id" name="resident_id" style="width: 75px;display:none" type="text" /></td>
-                    <td class="auto-style19"></td>
+                    <td class="auto-style27" colspan="9">
+                        <textarea id="rjudge1" name="rjudge1" style="width: 96%;" rows="2"></textarea>
+                    </td>
+                </tr>
+                <tr> 
+                    <td class="auto-style27" colspan="9">
+                        <textarea id="rjudge2" name="rjudge2" style="width: 96%;" rows="2"></textarea>
+                    </td>
+                </tr>
+                <tr> 
+                    <td class="auto-style27" colspan="9">
+                        <textarea id="rjudge3" name="rjudge3" style="width: 96%;" rows="2"></textarea>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style1">住院过程</td>
@@ -333,20 +353,29 @@
                     <td class="auto-style133"></td>
                     <td class="auto-style19"></td>
                 </tr>
-                <tr id="Tr1">
-                    <td class="auto-style1" rowspan="3" valign="top" style="padding-top: 10px" id="yz">医嘱</td>
+                <tr>
+                    <td class="auto-style1" valign="top" style="padding-top: 10px" id="yz">
+                        开药 
+                    </td>
                     <td class="auto-style36" colspan="9">
-                        1.<textarea id="yz1" name="yz1" style="height: 18px; width: 96%;" placeholder="检查项目"></textarea>
+                        <textarea id="ky" name="ky" style=" width: 96%;" rows="2"></textarea>
+                    </td>
+                </tr>
+                <tr id="Tr1">
+                    <td class="auto-style1" rowspan="3" valign="top" style="padding-top: 10px" id="yz">医嘱
+                        <input type="button" value="增加一行" style="width:70px;height:22px" /></td>
+                    <td class="auto-style36" colspan="9">
+                        <textarea id="yz1" name="yz1" style=" width: 96%;"  rows="2"></textarea>
                     </td>
                 </tr>
                 <tr id="Tr2">
                     <td class="auto-style36" colspan="9">
-                        2.<textarea id="yz2" name="yz2" style="height: 18px; width: 96%;" placeholder="检查项目"></textarea>
+                        <textarea id="yz2" name="yz2" style="width: 96%;" rows="2"></textarea>
                     </td>
                 </tr>
                 <tr id="Tr3">
                     <td class="auto-style36" colspan="9">
-                        3.<textarea id="yz3" name="yz3" style="height: 18px; width: 96%;" placeholder="检查项目" onkeyup="add()"></textarea>
+                        <textarea id="yz3" name="yz3" style="width: 96%;" rows="2" onkeyup="add()"></textarea>
                     </td>
                 </tr>
                 <tr id="last">

@@ -77,7 +77,12 @@
             padding: 2px;
             background-color: #f1f3f5;
         }
-
+         .auto-style8 {
+            background-color: #f1f3f5;
+            padding: 2px; 
+            text-align: left;
+            border: 1px white solid;
+        }
         .auto-style27 {
             background-color: #f1f3f5;
             padding: 2px;
@@ -249,6 +254,9 @@
                     <td class="auto-style28">
                         <select style="width:142px" id="department" name="department">
                             <option value="">=请选择=</option>
+                            <option value="11">放疗科</option>
+                            <option value="12">化疗科</option>
+                            <option value="13">五官科</option>
                             <option value="1">内科</option>
                             <option value="2">外科</option>
                             <option value="3">妇产科</option>
@@ -265,12 +273,13 @@
                     <td class="auto-style33">
                         <input type="text" id="number" style="height: 18px; width: 90px" name="number" />
                     </td>
-                    <td class="auto-style133">床位号<span style="color: #ff0000">*</span></td>
+                    @*<td class="auto-style133">床位号<span style="color: #ff0000">*</span></td>*@
+                    <td class="auto-style133">登记号<span style="color: #ff0000">*</span></td>
                     <td class="auto-style19">
                         <input type="text" id="bed_number" style="height: 18px; width: 75px" name="bed_number" />
                     </td>
                 </tr>
-                <tr>
+                @*<tr>
                     <td class="auto-style1">病程录</td>
                     <td class="auto-style27">
                         <input type="text" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm', maxDate: '%y-%M-%d %H:%m' })" style="width: 100px; height: 18px;" id="rq" name="rq" placeholder="日期" />
@@ -278,7 +287,64 @@
                     <td class="auto-style36" colspan="8">
                         <textarea style="width:98%" rows="10" id="context" name="context"></textarea>
                     </td>
+                </tr>*@
+
+                <tr>
+                    <td class="auto-style1" rowspan="3">首次病程记录</td>
+                    <td class="auto-style27" style="text-align:right">
+                        病例特点
+                    </td>
+                    <td class="auto-style8"  colspan="8">
+                        <label style="color: red; padding: 5px 0px; display: none;" id="lbltd">
+                        应当在对病史、体格检查和辅助检查进行全免分析、归纳和整理后写出病例特征，包括阳性发现和具有鉴别诊断意义的阴性症状和体征等
+                        </label>
+                        <div>
+                            <textarea id="bltd" style="width: 98%; padding-top: 2px;  overflow-y: hidden;" rows="4" name="bltd"></textarea>
+                        </div>
+                    </td>
                 </tr>
+                <tr> 
+                    <td class="auto-style27" style="text-align:right">
+                        拟诊讨论
+                    </td>
+                    <td class="auto-style8" colspan="8">
+                        <label style="color: red; padding: 5px 0px; display: none;" id="lnztl">
+                            根据病例特点，提出初步诊断和诊断依据；对诊断不明的写出鉴别诊断并进行分析；并对下一步诊治措施进行分析
+                        </label>
+                        <div>
+                            <textarea id="nztl" style="width: 98%; padding-top: 2px;  overflow-y: hidden;" rows="4" name="nztl"></textarea>
+                        </div>
+                    </td>
+                </tr>
+                <tr> 
+                    <td class="auto-style27" style="text-align:right">
+                        诊疗计划
+                    </td>
+                    <td class="auto-style8" colspan="8">
+                        <label style="color: red; padding: 5px 0px; display: none;" id="lzljh">
+                            提出具体的检查及治疗措施安排
+                        </label>
+                        <div>
+                            <textarea id="zljh" style="width: 98%; padding-top: 2px;  overflow-y: hidden;" rows="4" name="zljh"></textarea>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="auto-style1">日常病程记录</td>
+                    <td class="auto-style27" style="text-align:right">
+                        <input type="text" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm', maxDate: '%y-%M-%d %H:%m' })" style="width: 100px; height: 18px;" id="rq" name="rq" placeholder="点击填写日期" />
+                    </td>
+                    <td class="auto-style8" colspan="8">
+                        <label style="color: red; padding: 5px 0px; display: none;" id="lbcjl">
+                            对病危患者应当根据病情变化随时书写病程记录，每天至少1次，记录时间应当具体到分钟。对病重患者，至少2天记录一次病程记录。对病情稳定的患者，至少3天记录一次病程记录
+                        </label>
+                        <div>
+                            <textarea id="bcjl" style="width: 98%; padding-top: 2px;  overflow-y: hidden;" rows="4" name="bcjl"></textarea>
+                        </div>
+                    </td>
+                </tr>
+
 
                 <tr id="last">
                     <td colspan="10" style="height: 25px; padding-top: 3px; border-left: 1px solid white; border-right: 1px solid white; border-bottom: 1px solid white">
@@ -294,5 +360,29 @@
             </table>
         </div>
     </form>
+    <script>
+        $("#bltd").focus(function () {
+            $("#lbltd").show("slow");
+        }).blur(function () {
+            $("#lbltd").hide("slow");
+        })
+
+        $("#nztl").focus(function () {
+            $("#lnztl").show("slow");
+        }).blur(function () {
+            $("#lnztl").hide("slow");
+        })
+        
+        $("#zljh").focus(function () {
+            $("#lzljh").show("slow");
+        }).blur(function () {
+            $("#lzljh").hide("slow");
+        })
+        $("#bcjl").focus(function () {
+            $("#lbcjl").show("slow");
+        }).blur(function () {
+            $("#lbcjl").hide("slow");
+        })
+    </script>
 </body>
 </html>
